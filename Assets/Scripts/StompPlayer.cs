@@ -23,7 +23,7 @@ public class StompPlayer : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (Time.time > _cooldown + 2 && _defaultPosition)
         {

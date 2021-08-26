@@ -13,14 +13,16 @@ public class CollisionBehavior : MonoBehaviour
     private GameObject _respawnPoint;
     private Material _normalMaterial;
     private Material _dmgMaterial;
+    private GameObject _uiCanvas;
 
     public void Start() 
     {
         _collisionMesh = GetComponent<MeshRenderer>();
-        _hp = 10;
+        _hp = 4;
         _respawnPoint = GameObject.Find("/RespawnPoint");
         _normalMaterial = GetComponent<Renderer>().material;
         _dmgMaterial = (Material)Resources.Load("Materials/PlayerDmgMaterial", typeof(Material));
+        _uiCanvas = GameObject.Find("/Canvas");
     }
 
     public void OnCollisionEnter(Collision other) 
