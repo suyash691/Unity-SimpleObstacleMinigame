@@ -9,13 +9,11 @@ public class PlayerEntityMovement : MonoBehaviour
     private Rigidbody rb;
     [SerializeField]
     private float _speed = 400f;
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
-
-    // Update is called once per frame
+    
     void FixedUpdate()
     {
         rb.velocity = (_movementInput * _speed * Time.deltaTime);
